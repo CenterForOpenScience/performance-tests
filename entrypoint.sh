@@ -1,5 +1,4 @@
 #!/bin/bash
-#
+
 git clone https://github.com/CenterForOpenScience/performance-tests \
-  && ls \
-  && jmeter -n -t performance-tests/osf-test-plan.jmx
+  && jmeter -n -t performance-tests/osf-test-plan.jmx -l jmeter-results.log -e -o reports
