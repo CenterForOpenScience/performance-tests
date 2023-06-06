@@ -23,7 +23,7 @@ RUN wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/${CMDRUNNER_VERSION}/cm
   && mv ./cmdrunner-${CMDRUNNER_VERSION}.jar ${JMETER_HOME}/lib
 
 RUN java -cp ${JMETER_HOME}/lib/ext/jmeter-plugins-manager-${JMETER_PMANAGER_VERSION}.jar org.jmeterplugins.repository.PluginManagerCMDInstaller \
-  && ${JMETER_HOME}/bin/PluginsManagerCMD.sh install-all-except 
+  && ${JMETER_HOME}/bin/PluginsManagerCMD.sh install-all-except ulp-jmeter-gwt-plugin 
 
 RUN apt-get update && apt-get install -y git vim
 
